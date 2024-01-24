@@ -62,5 +62,10 @@ namespace ThanksgivingWPF
 
             configurationWindow.ShowDialog();
         }
+
+        private void cmbMonth_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
