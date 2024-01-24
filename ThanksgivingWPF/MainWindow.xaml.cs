@@ -29,8 +29,6 @@ namespace ThanksgivingWPF
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            //var model = new Model();
-
             //Obter o Index do ComboBox
             int selectedMonthIndex = cmbMonth.SelectedIndex;
 
@@ -41,7 +39,10 @@ namespace ThanksgivingWPF
             int inputYear = Convert.ToInt32(((ComboBoxItem)cmbYear.SelectedItem).Content);
 
 
-            var jsonText = File.ReadAllText("C:\\Projects\\Thanksgiving\\ThanksgivingWPF\\model.json");
+            string currentDirectory = Directory.GetCurrentDirectory();
+            string jsonPath = System.IO.Path.Combine(currentDirectory, "model.json");
+            var jsonText = File.ReadAllText(jsonPath);
+
             var model = JsonConvert.DeserializeObject<Model>(jsonText);
 
 
@@ -57,9 +58,9 @@ namespace ThanksgivingWPF
 
         private void ConfigurationButton_Click(object sender, RoutedEventArgs e)
         {
-            var model = new Model();
-            ConfigurationWindow configWindow = new ConfigurationWindow(model);
-            configWindow.ShowDialog();
+            ConfigurationWindow configurationWindow = new ConfigurationWindow();
+
+            configurationWindow.ShowDialog();
         }
     }
 }

@@ -7,7 +7,7 @@
             <Label Content="Ciclo de Tempo:"/>
             <TextBox x:Name="txtCycleTime" Width="100" Margin="5"/>
 
-            <Button Content="Salvar" Width="80" Height="30" Margin="5" Click="SaveButton_Click"/>
+            <Button Content="Salvar" Width="80" Height="30" Margin="5" Click="Button_Click"/>
         </StackPanel>
     </Grid>
 </Window>

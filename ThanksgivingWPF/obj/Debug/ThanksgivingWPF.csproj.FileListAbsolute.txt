@@ -19,3 +19,4 @@ C:\Projects\Thanksgiving\ThanksgivingWPF\obj\Debug\ConfigurationWindow.g.cs
 C:\Projects\Thanksgiving\ThanksgivingWPF\bin\Debug\Newtonsoft.Json.dll
 C:\Projects\Thanksgiving\ThanksgivingWPF\bin\Debug\Newtonsoft.Json.xml
 C:\Projects\Thanksgiving\ThanksgivingWPF\obj\Debug\ThanksgivingWPF.csproj.CopyComplete
+C:\Projects\Thanksgiving\ThanksgivingWPF\bin\Debug\model.json
