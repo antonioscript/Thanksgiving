@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,7 +29,7 @@ namespace ThanksgivingWPF
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            var model = new Model();
+            //var model = new Model();
 
             //Obter o Index do ComboBox
             int selectedMonthIndex = cmbMonth.SelectedIndex;
@@ -37,6 +39,11 @@ namespace ThanksgivingWPF
 
             //Obter ano selecionado
             int inputYear = Convert.ToInt32(((ComboBoxItem)cmbYear.SelectedItem).Content);
+
+
+            var jsonText = File.ReadAllText("C:\\Projects\\Thanksgiving\\ThanksgivingWPF\\model.json");
+            var model = JsonConvert.DeserializeObject<Model>(jsonText);
+
 
             var newOvolutionDate = model.OvulationOriginalDate;
             while (newOvolutionDate.Month != inputMonth || newOvolutionDate.Year != inputYear)

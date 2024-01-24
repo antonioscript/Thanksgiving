@@ -8,7 +8,7 @@ namespace ThanksgivingWPF
 {
     public class Model
     {
-        public int CiclyeTime { get; set; } = 27;
-        public DateTime OvulationOriginalDate { get; set; } = new DateTime(2023, 12, 23);
+        public int CiclyeTime { get; set; } 
+        public DateTime OvulationOriginalDate { get; set; } 
     }
 }
