@@ -13,8 +13,8 @@
             <ColumnDefinition Width="57*"/>
         </Grid.ColumnDefinitions>
 
-        <Label Content="Mês" HorizontalAlignment="Left" Margin="42,24,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="cmbMonth" HorizontalAlignment="Left" Margin="42,50,0,0" VerticalAlignment="Top" Width="80">
+        <Label Content="Mês" HorizontalAlignment="Left" Margin="85,24,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <ComboBox x:Name="cmbMonth" HorizontalAlignment="Left" Margin="85,50,0,0" VerticalAlignment="Top" Width="100">
             <ComboBoxItem Content="Janeiro"/>
             <ComboBoxItem Content="Fevereiro"/>
             <ComboBoxItem Content="Março"/>
@@ -28,7 +28,7 @@
             <ComboBoxItem Content="Novembro"/>
             <ComboBoxItem Content="Dezembro"/>
         </ComboBox>
-        <ComboBox x:Name="cmbYear" HorizontalAlignment="Left" Margin="42,110,0,0" VerticalAlignment="Top" Width="80">
+        <ComboBox x:Name="cmbYear" HorizontalAlignment="Left" Margin="85,110,0,0" VerticalAlignment="Top" Width="100">
             <ComboBoxItem Content="2024"/>
             <ComboBoxItem Content="2025"/>
             <ComboBoxItem Content="2026"/>
@@ -36,11 +36,11 @@
             <ComboBoxItem Content="2028"/>
             <ComboBoxItem Content="2029"/>
             <ComboBoxItem Content="2030"/>
-            <!-- Adicione mais anos conforme necessário -->
         </ComboBox>
-        <Label Content="Ano" HorizontalAlignment="Left" Margin="42,84,0,0" VerticalAlignment="Top"/>
-        <Button Content="Calcular" HorizontalAlignment="Left" Margin="42,158,0,0" VerticalAlignment="Top" Height="28" Width="57" Click="Button_Click"/>
-        <TextBox x:Name="txtResult" HorizontalAlignment="Left" Margin="42,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="74"/>
-        <Button Content="Configuração" HorizontalAlignment="Left" Margin="42,245,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="ConfigurationButton_Click"/>
+        <Label Content="Ano" HorizontalAlignment="Left" Margin="85,84,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Button Content="Calcular" HorizontalAlignment="Left" Margin="85,155,0,0" VerticalAlignment="Top" Height="29" Width="100" Click="Button_Click" Background="#FF00A7FF" Foreground="White"/>
+        <TextBox x:Name="txtResult" HorizontalAlignment="Left" Margin="85,257,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Height="24"/>
+        <Button Content="Configuração" HorizontalAlignment="Left" Margin="85,318,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="ConfigurationButton_Click"/>
+        <Label Content="Resultado" HorizontalAlignment="Center" Margin="0,217,0,0" VerticalAlignment="Top" FontWeight="Bold" Width="100"/>
     </Grid>
 </Window>
