@@ -25,6 +25,33 @@ namespace ThanksgivingWPF
         public ConfigurationWindow()
         {
             InitializeComponent();
+            LoadJsonValues();
+        }
+
+        private void LoadJsonValues()
+        {
+            try
+            {
+                string currentDirectory = Directory.GetCurrentDirectory();
+                string jsonPath = System.IO.Path.Combine(currentDirectory, "model.json");
+
+                if (File.Exists(jsonPath))
+                {
+                    var jsonText = File.ReadAllText(jsonPath);
+                    var model = JsonConvert.DeserializeObject<Model>(jsonText);
+
+                    // Preencher o Ciclo de Tempo
+                    txtCycleTime.Text = model.CiclyeTime.ToString();
+
+                    // Preencher a Data Base
+                    dpDataBase.SelectedDate = model.OvulationOriginalDate;
+                }
+            }
+            catch (Exception ex)
+            {
+                // Tratar exceções, se houver algum problema ao carregar os valores do JSON
+                MessageBox.Show($"Erro ao carregar as informações do JSON: {ex.Message}", "Erro", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -37,7 +64,14 @@ namespace ThanksgivingWPF
 
                 var model = JsonConvert.DeserializeObject<Model>(jsonText);
 
+                // Atualizar o Ciclo de Tempo
                 model.CiclyeTime = Convert.ToInt32(txtCycleTime.Text);
+
+                // Obter a data do DatePicker
+                if (dpDataBase.SelectedDate.HasValue)
+                {
+                    model.OvulationOriginalDate = dpDataBase.SelectedDate.Value;
+                }
 
                 var updatedJson = JsonConvert.SerializeObject(model, Formatting.Indented);
 
@@ -49,8 +83,9 @@ namespace ThanksgivingWPF
             catch (Exception ex)
             {
                 // Tratar exceções, se houver algum problema
-                MessageBox.Show($"Erro ao atualizar as  informações: {ex.Message}", "Erro", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show($"Erro ao atualizar as informações: {ex.Message}", "Erro", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+
     }
 }
