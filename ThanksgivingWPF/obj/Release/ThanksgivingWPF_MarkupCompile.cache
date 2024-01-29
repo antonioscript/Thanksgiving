@@ -4,11 +4,11 @@
 winexe
 C#
 .cs
-C:\Projects\Thanksgiving\ThanksgivingWPF\obj\Debug\
+C:\Projects\Thanksgiving\ThanksgivingWPF\obj\Release\
 ThanksgivingWPF
 none
 false
-DEBUG;TRACE
+TRACE
 C:\Projects\Thanksgiving\ThanksgivingWPF\App.xaml
 2-89734275
 

@@ -52,7 +52,8 @@ namespace ThanksgivingWPF
                 newOvolutionDate = newOvolutionDate.AddDays(model.CiclyeTime);
             }
 
-            txtResult.Text = newOvolutionDate.ToString("dd-MM-yyyy");
+            txtResultDate.Text = newOvolutionDate.ToString("dd-MM-yyyy");
+            txtResultDayOfWeek.Text = newOvolutionDate.DayOfWeek.ToString();
 
         }
 
@@ -64,6 +65,11 @@ namespace ThanksgivingWPF
         }
 
         private void cmbMonth_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void txtResultDayOfWeek_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }

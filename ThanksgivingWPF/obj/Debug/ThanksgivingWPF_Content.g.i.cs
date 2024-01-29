@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("settings_fill0_wght400_grad0_opsz24.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("testeee.ico")]
 
 
